@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="mr-auto  bg-gradient-to-l from-purple-500 to-blue-600">
+    <div class=" bg-purple-500 flex justify-center rounded-full w-36 h-36 translate-y-60 translate-x-56">
+    </div>
+   
+    <div class="flex translate-x-52 clk translate-y-2/4 justify-center rounded-lg bg-red-300 
+    text-white bg-opacity-15 backdrop-blur-sm w-8/12 p-16 mx-7 text-8xl">
+      <span id="hrs">00</span>
+      <span>:</span>  
+      <span id="min">00</span>  
+      <span>:</span>  
+      <span id="sec">00</span>  
+   <br>
+   </div>
+   <div class=" bg-blue-500 rounded-xl bg-opacity-55 w-36 h-36 -translate-x-72 float-end">
+    </div>
+   <script>
+       
+        let hrs = document.getElementById('hrs');
+        let min = document.getElementById('min');
+        let sec = document.getElementById('sec');
+       
+
+    setInterval(()=>{
+
+        let currenTime = new Date();
+        hrs.innerHTML = (currenTime.getHours('hrs')<10? "0":"") + currenTime.getHours('hrs');;
+        min.innerHTML = (currenTime.getMinutes('min')<10? "0":"") + currenTime.getMinutes('min');
+        sec.innerHTML = (currenTime.getSeconds('sec')<10? "0":"")+ currenTime.getSeconds('sec');
+      
+    },1000);
+
+     
+   </script>
+</body>
+</html>
